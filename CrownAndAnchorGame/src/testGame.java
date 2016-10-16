@@ -3,6 +3,8 @@ import java.io.*;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+//import junit.framework.TestCase;
+//import junit.framework.Assert;
 import org.junit.runner.JUnitCore;
 
 public class testGame {             
@@ -21,7 +23,7 @@ public class testGame {
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
-   		String name = "Fred";
+   		String name = "Abhishek";
         int balance = 100;
         int limit = 0;
         Player player = new Player(name, balance);
@@ -30,22 +32,20 @@ public class testGame {
 
         DiceValue pick = DiceValue.CLUB;
 		   
-		System.out.printf("Turn: %s bet %d on %s\n", player.getName(), bet, pick); 
+		System.out.printf("\nTurn: %s bet %d on %s\n", player.getName(), bet, pick); 
 		
 		int winnings = game.playRound(player, pick, bet);
 				
 		System.out.printf("Rolled %s, %s, %s\n",
 				cdv.get(0), cdv.get(1), cdv.get(2));
-		
+				
 		if (winnings > 0) {
-			System.out.printf("%s won %d, balance now %d\n\n",
-					player.getName(), winnings, player.getBalance());
+			System.out.printf("%s won %d, balance now %d\n\n", player.getName(), winnings, player.getBalance());			
 		}
 		else {
-			System.out.printf("%s lost, balance now %d\n\n",
-					player.getName(), player.getBalance());
+			System.out.printf("%s lost, balance now %d\n\n", player.getName(), player.getBalance());
 		}
-		assertEquals(110, player.getBalance());
+		assertEquals(105, player.getBalance());
 		
     }
 	    
