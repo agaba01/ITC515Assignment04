@@ -23,7 +23,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 3; i++)
             {
             	String name = "Fred";
             	int balance = 100;
@@ -33,8 +33,7 @@ public class Main {
                 int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
-                System.out.println(String.format("%s starts with balance %d, limit %d", 
-                		player.getName(), player.getBalance(), player.getLimit()));
+                System.out.println(String.format("%s starts with balance %d, limit %d", player.getName(), player.getBalance(), player.getLimit()));
 
                 int turn = 0;
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
@@ -42,23 +41,19 @@ public class Main {
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
-                	System.out.printf("Turn %d: %s bet %d on %s\n",
-                			turn, player.getName(), bet, pick); 
+                	System.out.printf("Turn %d: %s bet %d on %s\n", turn, player.getName(), bet, pick); 
                 	
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();
                     
-                    System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2));
+                    System.out.printf("Rolled %s, %s, %s\n", cdv.get(0), cdv.get(1), cdv.get(2));
                     
                     if (winnings > 0) {
-	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, player.getBalance());
+	                    System.out.printf("%s won %d, balance now %d\n\n", player.getName(), winnings, player.getBalance());
 	                	winCount++; 
                     }
                     else {
-	                    System.out.printf("%s lost, balance now %d\n\n",
-	                    		player.getName(), player.getBalance());
+	                    System.out.printf("%s lost, balance now %d\n\n", player.getName(), player.getBalance());
 	                	loseCount++;
                     }
                     
