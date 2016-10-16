@@ -23,7 +23,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
             	String name = "Fred";
             	int balance = 100;
