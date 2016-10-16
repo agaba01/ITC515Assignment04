@@ -28,8 +28,10 @@ public class Game {
 		if (player == null) throw new IllegalArgumentException("Player cannot be null.");
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
-		
+				
+		System.out.printf("%s Latest balance Before Take Bet %d\n\n", player.getName(), player.getBalance());
 		player.takeBet(bet);
+		System.out.printf("%s Latest balance After Take Bet %d\n\n", player.getName(), player.getBalance());
 		    
 		int matches = 0;
 		for ( Dice d : dice) {
