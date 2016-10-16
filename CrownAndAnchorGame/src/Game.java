@@ -44,6 +44,7 @@ public class Game {
 		} else {
 			player.takeBet(bet);
 		}
+		
         return winnings;		
 	}
 	
