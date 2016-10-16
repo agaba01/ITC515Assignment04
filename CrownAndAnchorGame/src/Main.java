@@ -23,7 +23,7 @@ public class Main {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
             	String name = "Fred";
             	int balance = 100;
@@ -39,8 +39,8 @@ public class Main {
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
                 {
                     turn++;                    
-                	//DiceValue pick = DiceValue.getRandom();
-					DiceValue pick = DiceValue.SPADE;
+                	DiceValue pick = DiceValue.getRandom();
+					//DiceValue pick = DiceValue.SPADE;
                    
                 	System.out.printf("Turn %d: %s bet %d on %s\n", turn, player.getName(), bet, pick); 
                 	
