@@ -14,8 +14,6 @@ public class testGame {
 	*/	
 	@Test
     public void testBug1() {
-        //BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
-
         Dice d1 = new Dice();
         Dice d2 = new Dice();
         Dice d3 = new Dice();
