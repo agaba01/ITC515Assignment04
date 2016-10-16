@@ -55,7 +55,7 @@ public class testGame {
 	@Test
     public void testBug2() {
 		String name = "Salman";
-        int balance = 10;
+        int balance = 50;
         int limit = 0;
 		
         Player player = new Player(name, balance);
@@ -95,7 +95,7 @@ public class testGame {
 		} //while
 
 		System.out.print(String.format("%d turns later. End Test Game for Bug 2: ", turn));
-		System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
+		System.out.println(String.format("%s now has balance of $%d\n", player.getName(), player.getBalance()));
 		System.out.printf("TEST BUG 2 ENDS\n\n"); 
 	}
 	    
